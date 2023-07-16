@@ -1,0 +1,295 @@
+<html>
+    <head>
+        <title>news</title>
+
+        <style>
+           body{
+                background: linear-gradient(rgba(0,0,0,0.5),#020303),url('https://img.freepik.com/free-photo/newspaper-background-concept_23-2149501639.jpg?w=2000');
+                background-size: cover;
+                background-position:center ;
+                height: 100vh;
+            }
+
+            .logo{
+                width:140px;
+                margin-left: 700px;
+                position:absolute;
+                top: 4%;
+                left: 10%;
+            }
+
+            #sideNav{
+                width: 250px;
+                height:100vh;
+                position:fixed;
+                right: 0;
+                top: 0;
+                background: #2b2d2d;
+                z-index: 2;
+                transition: 0.5s;
+
+            }
+
+            nav {
+                cursor: pointer;
+            }
+
+            nav ul li{
+                list-style: none;
+                margin: 40px 20px;
+
+            }
+
+            nav ul li a{
+                text-decoration: none;
+                color: #fff;
+                
+
+            }
+            nav ul li a{
+                text-decoration: none;
+                color: #fff;
+            }
+
+            
+
+
+
+            nav ul li a:hover{
+                color: #6be414;
+                
+            }
+            
+
+            
+
+
+            #menuBtn{
+                width: 50px;
+                height: 50px;
+                background:#676f6e ;
+                text-align: center;
+                position: fixed;
+                right: 30px;
+                top: 20px;
+                border-radius:3px ;
+                z-index: 3;
+                cursor: pointer;
+            }
+
+            #menuBtn img{
+                width: 20px;
+                margin-top: 15px;
+            }
+
+            #menuBtn img{
+                width: 20px;
+                margin-top: 15px;
+            }
+
+
+            .slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin-top: 250px;
+  margin-bottom: auto;
+  margin-left: 600px;
+  margin-right: 100px;
+}
+
+/* Caption text */
+.text {
+  color: #1a1515;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+} 
+            
+
+        </style>
+
+
+
+
+
+
+
+    </head>
+
+    <body>
+
+        
+
+        <section id="banner">
+                    <img src="C:\Users\ANSTER  SELVARAJ\Downloads\kisspng-free-newspaper-computer-icons-online-newspaper-goo-news-png-vector-5ab0db73bb2261.8571462715215399557665.png" class="logo">
+        </section>  
+
+        <div id="sideNav">
+            <nav>
+                <ul>
+                    <li> <a href='sports.html'>SPORTS</a></li>
+                    <li> <a href='environment.html'>ENVIRONMENT</a></li>
+                    <li> <a href='entertainment.html'>ENTERTAINMENT</a></li>
+                    <li> <a href='politics.html'>POLITICS</a></li>
+                    <li> <a href='education.html'>EDUCATION</a></li>
+                    <li> <a href='tech.html'>TECH</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="menuBtn">
+            <img src="C:\Users\ANSTER  SELVARAJ\Downloads\Barber_Shop_img\Barber_Shop_img\menu.png" id="menu">
+        </div>
+
+        <script>
+            var menuBtn = document.getElementById('menuBtn')
+            var sideNav = document.getElementById('sideNav')
+            var menu = document.getElementById('menu')
+    
+            sideNav.style.right='-250px'
+            
+            menuBtn.onclick = function(){
+                if (sideNav.style.right=='-250px'){
+                    sideNav.style.right='0';
+                    
+                }
+                else{
+                    sideNav.style.right='-250px';
+                
+                }
+            }
+        </script>
+
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://www.home-assistant.io/images/dashboards/weather.png" style="width:100%">
+      <div class="text">weather report</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://akm-img-a-in.tosshub.com/businesstoday/styles/medium_crop_simple/public/images/story/202110/petrol-graphic.jpg?itok=dS-u_XUQ" style="width:100%">
+      <div class="text">fuel rate</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://www.kitco.com/commentaries/2021-02-04/images/LBMA_0204_1.jpg" style="width:100%">
+      <div class="text">gold , silver , platinum</div>
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+
+
+          
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
